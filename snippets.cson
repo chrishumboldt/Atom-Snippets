@@ -80,7 +80,7 @@
       'prefix': 'include-js'
       'body': '<script src="$1"></script>'
    'Demo Message':
-      'prefix': 'web-demo-message'
+      'prefix': 'rocket-demo-message'
       'body': """
       <div id="rocket-demo-message">
          You need to run "npm install" and include the neccessary demo files in order to view this file.
