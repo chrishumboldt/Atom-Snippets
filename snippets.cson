@@ -1,0 +1,110 @@
+# Your snippets
+#
+# Atom snippets allow you to enter a simple prefix in the editor and hit tab to
+# expand the prefix into a larger code block with templated values.
+#
+# You can create a new snippet in this file by typing "snip" and then hitting
+# tab.
+#
+# An example CoffeeScript snippet to expand log to console.log:
+#
+# '.source.coffee':
+#   'Console log':
+#     'prefix': 'log'
+#     'body': 'console.log $1'
+#
+# Each scope (e.g. '.source.coffee' above) can only be declared once.
+#
+# This file uses CoffeeScript Object Notation (CSON).
+# If you are unfamiliar with CSON, you can read more about it in the
+# Atom Flight Manual:
+# https://atom.io/docs/latest/using-atom-basic-customization#cson
+'*':
+   'Code Heading':
+      'prefix': 'web-code'
+      'body': """
+      /**
+      @author ${1:Iqela}
+      **/
+      """
+   'Table of Contents':
+      'prefix': 'web-table-of-contents'
+      'body': """
+      // Table of contents
+      // $1
+      """
+'.html':
+   'HTML Template':
+      'prefix': 'web-template-html'
+      'body': """
+         <!DOCTYPE html>
+         <html>
+         <head>
+
+            <meta charset="utf-8">
+            <meta http-equiv="x-ua-compatible" content="ie=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+            <title>$1</title>
+
+         </head>
+         <body style="display:none">
+
+            /* Your content goes here */
+            <script id="webplate" src="webplate/start.js"></script>
+
+         </body>
+         </html>
+         """
+   'HTML Template Blank':
+      'prefix': 'web-template-html-blank'
+      'body': """
+         <!DOCTYPE html>
+         <html>
+         <head>
+
+            <meta charset="utf-8">
+            <meta http-equiv="x-ua-compatible" content="ie=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+            <title>$1</title>
+
+         </head>
+         <body>
+
+         </body>
+         </html>
+         """
+   'Include CSS':
+      'prefix': 'web-include-css'
+      'body': '<link href="$1" rel="stylesheet" type="text/css">'
+   'Include JS':
+      'prefix': 'web-include-js'
+      'body': '<script src="$1"></script>'
+   'Demo Message':
+      'prefix': 'web-demo-message'
+      'body': """
+			<div id="web-demo-message">
+				You need to run "bower install" and include the neccessary demo files in order to view this file.
+			</div>
+			"""
+'.js':
+   'Standard Javascript Loop':
+      'prefix': 'web-js-loop'
+      'body': """
+      for (var i = 0, len = ${1:element}.length; i < len; i++) {
+         $2
+      }
+      """
+   'Standard Javascript Loop 2':
+      'prefix': 'web-js-loop-2'
+      'body': """
+      for (var i2 = 0, len2 = ${1:element}.length; i2 < len2; i2++) {
+         $2
+      }
+      """
+   'Standard Javascript Loop 3':
+      'prefix': 'web-js-loop-3'
+      'body': """
+      for (var i3 = 0, len3 = ${1:element}.length; i3 < len3; i3++) {
+         $2
+      }
+      """
