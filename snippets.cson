@@ -18,14 +18,38 @@
 # This file uses CoffeeScript Object Notation (CSON).
 # If you are unfamiliar with CSON, you can read more about it in the
 # Atom Flight Manual:
-# https://atom.io/docs/latest/using-atom-basic-customization#cson
+# http://flight-manual.atom.io/using-atom/sections/basic-customization/#_cson
 '*':
    'Code Heading':
       'prefix': 'code-heading'
       'body': """
       /**
-      @author ${1:Chris Humboldt}
-      **/
+       * @author ${1}
+       */
+      """
+   'Code Comment':
+      'prefix': 'code-comment'
+      'body': """
+      /**
+       * ${1}
+       */
+      """
+   'Code Comment With Params':
+      'prefix': 'code-comment-params'
+      'body': """
+      /**
+       * @param ${1}
+       */
+       """
+   'Code Comment With Deconstructed Params':
+      'prefix': 'code-comment-decon-params'
+      'body': """
+      /**
+       * ${1}
+       *
+       * @param object The deconstructed arguments object.
+       * @param object.${2} ${3}
+       */
       """
    'Table of Contents':
       'prefix': 'table-of-contents'
@@ -36,27 +60,6 @@
 '.html':
    'HTML Template':
       'prefix': 'template-html'
-      'body': """
-         <!DOCTYPE html>
-         <html>
-         <head>
-
-            <meta charset="utf-8">
-            <meta http-equiv="x-ua-compatible" content="ie=edge">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-            <title>$1</title>
-
-         </head>
-         <body style="display: none;">
-
-            /* Your content goes here */
-            <script id="rocket" src="rocket/launch.js"></script>
-
-         </body>
-         </html>
-         """
-   'HTML Template Blank':
-      'prefix': 'template-html-blank'
       'body': """
          <!DOCTYPE html>
          <html>
@@ -79,32 +82,6 @@
    'Include JS':
       'prefix': 'include-js'
       'body': '<script src="$1"></script>'
-   'Demo Message':
-      'prefix': 'rocket-demo-message'
-      'body': """
-      <div id="rocket-demo-message">
-         You need to run "npm install" and include the neccessary demo files in order to view this file.
-      </div>
-      """
-'.js':
-   'Standard Javascript Loop':
-      'prefix': 'js-loop'
-      'body': """
-      for (var i = 0, len = ${1:element}.length; i < len; i++) {
-         $2
-      }
-      """
-   'Standard Javascript Loop 2':
-      'prefix': 'js-loop-2'
-      'body': """
-      for (var i2 = 0, len2 = ${1:element}.length; i2 < len2; i2++) {
-         $2
-      }
-      """
-   'Standard Javascript Loop 3':
-      'prefix': 'js-loop-3'
-      'body': """
-      for (var i3 = 0, len3 = ${1:element}.length; i3 < len3; i3++) {
-         $2
-      }
-      """
+   'Angular NG Container':
+      'prefix': 'ng-container'
+      'body': '<ng-container>$1</ng-container>'
