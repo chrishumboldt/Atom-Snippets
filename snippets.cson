@@ -34,6 +34,11 @@
        * ${1}
        */
       """
+   'Code Comment Line':
+      'prefix': 'code-comment-line'
+      'body': """
+      /* ${1} */
+      """
    'Code Comment With Params':
       'prefix': 'code-comment-params'
       'body': """
