@@ -24,7 +24,7 @@
       'prefix': 'code-heading'
       'body': """
       /**
-       * @author ${1}
+       * @author ${1:Chris Humboldt}
        */
       """
    'Code Comment':
@@ -90,3 +90,13 @@
    'Angular NG Container':
       'prefix': 'ng-container'
       'body': '<ng-container>$1</ng-container>'
+'.ts':
+   'Export File':
+      'prefix': 'export-file'
+      'body': """
+      /**
+       * @author ${1:Chris Humboldt}
+       */
+
+      export * from '${2}';
+      """
